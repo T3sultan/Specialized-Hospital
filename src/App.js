@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/Login/Login';
+import FindADoctor from './components/FindADoctor/FindADoctor';
+import OnlineMedicine from './components/OnlineMedicine/OnlineMedicine';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/home">
+            <Home></Home>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/doctor">
+            <FindADoctor></FindADoctor>
+          </Route>
+          <Route exact path="/medicine">
+            <OnlineMedicine></OnlineMedicine>
+          </Route>
+          <Route exact path="*">
+            <PageNotFound></PageNotFound>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

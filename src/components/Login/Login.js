@@ -9,13 +9,22 @@ const Login = () => {
         signInUsingGitHub,
         handleEmailChangeInput,
         handlePasswordChangeInput,
-        handleLoginForm
+        handleLoginForm,
+        signInUsingGoogle
 
     } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
 
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(resutl => {
+
+                history.push(redirect_uri)
+            })
+    }
 
 
     return (
@@ -38,7 +47,7 @@ const Login = () => {
                     </form>
                     <p>Are you new?<Link to="/register" className="createStyle"> Create Account </Link></p>
 
-                    <button onClick={singInUsingGoogle} className="btn-regular btnStyle">Google SignIn</button>
+                    <button onClick={handleGoogleLogin} className="btn-regular btnStyle">Google SignIn</button>
                     <button onClick={signInUsingGitHub} className="btn-regular btnStyle">GitHub SingIn</button>
 
                 </Card.Body>

@@ -30,7 +30,7 @@ const useFireBase = () => {
 
 
 
-    const singInUsingGoogle = () => {
+    const signInUsingGoogle = () => {
         setLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -152,7 +152,7 @@ const useFireBase = () => {
         user,
         email,
         password,
-        singInUsingGoogle,
+        signInUsingGoogle,
         logout,
         isLoading,
         signInUsingGitHub,

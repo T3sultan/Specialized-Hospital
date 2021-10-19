@@ -1,0 +1,22 @@
+.login-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card{
+    background-color: rgb(184, 159, 159);
+}
+.btnStyle{
+    background-color: rgb(143, 13, 236);
+    border-radius: 5px;
+    color: white;
+}
+.createStyle{
+    color: rgb(92, 47, 163);
+    font-weight: bold;
+}
+.submitStyle{
+    background-color:rgb(98, 0, 255);
+    border-radius: 3px;
+}

@@ -31,21 +31,9 @@ const useFireBase = () => {
 
 
     const signInUsingGoogle = () => {
-        setLoading(true)
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const { displayName, email, phoneNumber, photoURL } = result.user;
-                const userInfo = {
-                    name: displayName,
-                    email: email,
-                    phone: phoneNumber,
-                    photo: photoURL,
-
-                }
-                setUser(userInfo);
-            })
-            .finally(() => setLoading(false))
-            ;
+       
+       return  signInWithPopup(auth, googleProvider);
+            
     }
     const signInUsingGitHub = () => {
         signInWithPopup(auth, gitHubProvider)
@@ -81,8 +69,10 @@ const useFireBase = () => {
 
         setLoading(true)
         signOut(auth)
-            .then(() => { })
-            .finally(() => setLoading(false));
+            .then(() => {
+                setUser({})
+             })
+            
     }
 
     const handleEmailChangeInput = (e) => {

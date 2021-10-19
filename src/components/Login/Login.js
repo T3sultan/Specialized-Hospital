@@ -16,7 +16,7 @@ const Login = () => {
         <div className="login-form my-5">
            
             <Card className="card" style={{ width: '18rem' }}>
-            <h1>Please Login</h1>
+            <h1 className='title'>Please Login</h1>
                 <Card.Body>
                     <form >
                         <input type="email" placeholder=" Email" required />

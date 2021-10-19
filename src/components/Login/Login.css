@@ -10,13 +10,22 @@
 .btnStyle{
     background-color: rgb(143, 13, 236);
     border-radius: 5px;
-    color: white;
+    color: black;
+    font-weight: 400;
 }
 .createStyle{
     color: rgb(92, 47, 163);
     font-weight: bold;
+    color: black;
 }
 .submitStyle{
     background-color:rgb(98, 0, 255);
     border-radius: 3px;
+    color: white;
+}
+.title{
+    font-size: 22px;
+}
+.convert{
+    font-size: 13px;
 }

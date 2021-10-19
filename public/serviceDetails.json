@@ -1,38 +1,40 @@
-[
-    {
-        "id": 1,
-        "name": "Intensive Care Unit",
-        "imgUrl": "https://i.ibb.co/wrRH9yP/sharon-mccutcheon-74-7j5t4s-G0-unsplash.jpg",
-        "description": "The sickest patients in the Rushmono Specialized Hospital are those in the ICU, where the staff is equipped to take care of people with conditions including strokes, heart attacks, major respiratory problems and surgical complications. Trauma from car crashes, gunshot wounds, severe falls, accidents and fires can also put patients in the ICU."
-    },
-    {
-        "id": 2,
-        "name": "Pediatric Intensive Care Unit",
-        "imgUrl": "https://i.ibb.co/1TvFHsV/richard-catabay-05k-HY7-AYCp8-unsplash.jpg",
-        "description": "The PICU is the section of the hospital that provides sick children with the highest level of medical care. It differs from other parts of the hospital, like the general medical floors, in that the PICU allows intensive nursing care and continuous monitoring of things like heart rate, breathing, and blood pressure."
-    },
-    {
-        "id": 3,
-        "name": "Neonatal Intensive Care Unit ",
-        "imgUrl": "https://i.ibb.co/hdBHRnT/piron-guillaume-y5h-QCIn1c6o-unsplash.jpg",
-        "description": "Newborn babies who need intensive medical attention are often admitted into a special area of the hospital called the Neonatal Intensive Care Unit (NICU). The NICU combines advanced technology and trained health care professionals to provide specialized care for the tiniest patients. NICUs may also have intermediate or continuing care areas for babies who are not as sick but do need specialized nursing care. Some hospitals do not have the personnel or a NICU and babies must be transferred to another hospital."
-    },
-    {
-        "id": 4,
-        "name": "Coronary care unit",
-        "imgUrl": "https://i.ibb.co/n6JyFdh/ccu.jpg",
-        "description": "We have cardiac monitoring facilities, and care for patients with a range of conditions including heart attacks. Highly skilled cardiac nurses and doctors deliver individualised plans of care for each patient, which may include cardiac interventional procedures, referral to other specialist centres or outpatient follow up."
-    },
-    {
-        "id": 5,
-        "name": "Dialysis",
-        "imgUrl": "https://i.ibb.co/TBfd3Sq/dialysis.jpg",
-        "description": "Dialysis is used in patients with rapidly developing loss of kidney function, called acute kidney injury (previously called acute renal failure), or slowly worsening kidney function, called Stage 5 chronic kidney disease, (previously called chronic kidney failure and end-stage renal disease and end-stage kidney disease)."
-    },
-    {
-        "id": 6,
-        "name": "Diabetes Treatment",
-        "imgUrl": "https://i.ibb.co/bRD8cbz/matt-chesin-b-Rjp-Gjwmae8-unsplash.jpg",
-        "description": "Contrary to popular perception, there's no specific diabetes diet. You'll need to center your diet on more fruits, vegetables, lean proteins and whole grains — foods that are high in nutrition and fiber and low in fat and calories — and cut down on saturated fats, refined carbohydrates and sweets. In fact, it's the best eating plan for the entire family. Sugary foods are OK once in a while, as long as they're counted as part of your meal plan."
-    }
-]
+{
+    "hospital": [
+        {
+            "id": "1",
+            "name": "Intensive Care Unit",
+            "imgUrl": "https://i.ibb.co/wrRH9yP/sharon-mccutcheon-74-7j5t4s-G0-unsplash.jpg",
+            "description": "The sickest patients in the Rushmono Specialized Hospital are those in the ICU, where the staff is equipped to take care of people with conditions including strokes, heart attacks, major respiratory problems and surgical complications. Trauma from car crashes, gunshot wounds, severe falls, accidents and fires can also put patients in the ICU."
+        },
+        {
+            "id": "2",
+            "name": "Pediatric Intensive Care Unit",
+            "imgUrl": "https://i.ibb.co/1TvFHsV/richard-catabay-05k-HY7-AYCp8-unsplash.jpg",
+            "description": "The PICU is the section of the hospital that provides sick children with the highest level of medical care. It differs from other parts of the hospital, like the general medical floors, in that the PICU allows intensive nursing care and continuous monitoring of things like heart rate, breathing, and blood pressure."
+        },
+        {
+            "id": "3",
+            "name": "Neonatal Intensive Care Unit ",
+            "imgUrl": "https://i.ibb.co/hdBHRnT/piron-guillaume-y5h-QCIn1c6o-unsplash.jpg",
+            "description": "Newborn babies who need intensive medical attention are often admitted into a special area of the hospital called the Neonatal Intensive Care Unit (NICU). The NICU combines advanced technology and trained health care professionals to provide specialized care for the tiniest patients. NICUs may also have intermediate or continuing care areas for babies who are not as sick but do need specialized nursing care. Some hospitals do not have the personnel or a NICU and babies must be transferred to another hospital."
+        },
+        {
+            "id": "4",
+            "name": "Coronary care unit",
+            "imgUrl": "https://i.ibb.co/n6JyFdh/ccu.jpg",
+            "description": "We have cardiac monitoring facilities, and care for patients with a range of conditions including heart attacks. Highly skilled cardiac nurses and doctors deliver individualised plans of care for each patient, which may include cardiac interventional procedures, referral to other specialist centres or outpatient follow up."
+        },
+        {
+            "id": "5",
+            "name": "Dialysis",
+            "imgUrl": "https://i.ibb.co/TBfd3Sq/dialysis.jpg",
+            "description": "Dialysis is used in patients with rapidly developing loss of kidney function, called acute kidney injury (previously called acute renal failure), or slowly worsening kidney function, called Stage 5 chronic kidney disease, (previously called chronic kidney failure and end-stage renal disease and end-stage kidney disease)."
+        },
+        {
+            "id": "6",
+            "name": "Diabetes Treatment",
+            "imgUrl": "https://i.ibb.co/bRD8cbz/matt-chesin-b-Rjp-Gjwmae8-unsplash.jpg",
+            "description": "Contrary to popular perception, there's no specific diabetes diet. You'll need to center your diet on more fruits, vegetables, lean proteins and whole grains — foods that are high in nutrition and fiber and low in fat and calories — and cut down on saturated fats, refined carbohydrates and sweets. In fact, it's the best eating plan for the entire family. Sugary foods are OK once in a while, as long as they're counted as part of your meal plan."
+        }
+    ]
+}

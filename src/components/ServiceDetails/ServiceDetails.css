@@ -1,0 +1,9 @@
+
+.container4{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.detailsStyle{
+    background-color: rgb(238, 238, 229);
+}

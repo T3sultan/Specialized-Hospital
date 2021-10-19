@@ -1,0 +1,20 @@
+.doctors{
+    background-color: white;
+    border-radius: 10px;
+    
+}
+.doctors img{
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.textStyle{
+    color: violet;
+    font-size: 20px;
+    font-weight: 500;
+}
+.professionStyle{
+    color:blueviolet;
+    font-weight: bold;
+
+}

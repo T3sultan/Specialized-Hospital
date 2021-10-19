@@ -5,25 +5,30 @@ import useAuth from '../../hooks/useAuth';
 import './Register.css'
 
 const Register = () => {
-    const { singInUsingGoogle, signInUsingGitHub } = useAuth();
+    const { singInUsingGoogle, 
+        signInUsingGitHub,
+        handleRegisterForm,
+        handleEmailChangeInput,
+        handlePasswordChangeInput
+     } = useAuth();
     return (
         <div className="login-form my-5">
 
             <Card className="card" style={{ width: '18rem' }}>
                 <h1 className="title">Create Account</h1>
                 <Card.Body>
-                    <form >
-                        <input type="text" placeholder=" Email" required />
+                    <form onSubmit={handleRegisterForm}>
+                        <input type="text" placeholder=" Name" required />
                         <br />
                         <br />
-                        <input type="email" placeholder=" Email" required />
+                        <input onChange={handleEmailChangeInput} type="email" placeholder=" Email" required />
                         <br />
                         <br />
 
-                        <input type="password" name="" id="" placeholder="Password" required />
+                        <input onChange={handlePasswordChangeInput} type="password" name="" id="" placeholder="Password" required />
                         <br />
                         <br />
-                        <input type="password" name="" id="" placeholder="confirm password" required />
+                        <input onChange={handlePasswordChangeInput} type="password" name="" id="" placeholder="confirm password" required />
                         <br />
                         <br />
                         <input className="submitStyle" type="submit" value="Submit" />

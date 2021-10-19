@@ -5,7 +5,13 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
-    const { singInUsingGoogle,signInUsingGitHub } = useAuth();
+    const { singInUsingGoogle,
+        signInUsingGitHub,
+        handleEmailChangeInput,
+        handlePasswordChangeInput,
+        handleLoginForm
+
+    } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
@@ -14,16 +20,16 @@ const Login = () => {
 
     return (
         <div className="login-form my-5">
-           
+
             <Card className="card" style={{ width: '18rem' }}>
-            <h1 className='title'>Please Login</h1>
+                <h1 className='title'>Please Login</h1>
                 <Card.Body>
-                    <form >
-                        <input type="email" placeholder=" Email" required />
+                    <form onSubmit={handleLoginForm}>
+                        <input onChange={handleEmailChangeInput} type="email" placeholder=" Email" required />
                         <br />
                         <br />
-                    
-                        <input type="password" name="" id="" placeholder="Password" required />
+
+                        <input onChange={handlePasswordChangeInput} type="password" name="" id="" placeholder="Password" required />
                         <br />
                         <br />
                         <br />
@@ -34,7 +40,7 @@ const Login = () => {
 
                     <button onClick={singInUsingGoogle} className="btn-regular btnStyle">Google SignIn</button>
                     <button onClick={signInUsingGitHub} className="btn-regular btnStyle">GitHub SingIn</button>
-                     
+
                 </Card.Body>
             </Card>
         </div>

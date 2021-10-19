@@ -6,6 +6,8 @@ import Login from './components/Login/Login';
 import FindADoctor from './components/FindADoctor/FindADoctor';
 import OnlineMedicine from './components/OnlineMedicine/OnlineMedicine';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import Booking from './components/ServiceDetails/ServiceDetails';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login></Login>
+          </Route>
+          <Route exact path="/serviceDetails/:id">
+            <ServiceDetails></ServiceDetails>
           </Route>
           <Route exact path="/doctor">
             <FindADoctor></FindADoctor>

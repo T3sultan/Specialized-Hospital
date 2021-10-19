@@ -9,10 +9,9 @@ const Service = ({ service }) => {
         <div className="service pb-3">
             <img src={imgUrl} alt="" />
             <h2>{name}</h2>
-
             <p className="p-5">{description.slice(0,100)}</p>
             <Link to={`/serviceDetails/${id}`}>
-                <button style={{fontSize:"13px"}} className="btn btn-warning"> {name}</button>
+                <button style={{fontSize:"13px"}} className="btn btn-info"> {name}</button>
 
             </Link>
         </div>

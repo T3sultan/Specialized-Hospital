@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
-    const { singInUsingGoogle,
+    const { 
         signInUsingGitHub,
         handleEmailChangeInput,
         handlePasswordChangeInput,
@@ -33,15 +33,26 @@ const Login = () => {
                 <h1 className='title'>Please Login</h1>
                 <Card.Body>
                     <form onSubmit={handleLoginForm}>
-                        <input onChange={handleEmailChangeInput} type="email" placeholder=" Email" required />
+                        <div className="row">
+                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label"></label>
+                            <div className="col-sm-10">
+                                <input onChange={handleEmailChangeInput} type="email" className="form-control" id="inputEmail3" placeholder="Enter your email" />
+                            </div>
+                        </div>
                         <br />
+                        <div className="row ">
+                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label"> </label>
+                            <div className="col-sm-10">
+                                <input onChange={handlePasswordChangeInput} type="password" className="form-control" id="inputPassword3" placeholder="Enter your password" />
+                            </div>
+                        </div>
+
                         <br />
 
-                        <input onChange={handlePasswordChangeInput} type="password" name="" id="" placeholder="Password" required />
-                        <br />
-                        <br />
-                        <br />
-                        <input className="submitStyle" type="submit" value="Submit" />
+                        <div className=" ">
+                            <button type="submit" className="btn btn-info btnStyle1">Login</button>
+
+                        </div>
 
                     </form>
                     <p>Are you new?<Link to="/register" className="createStyle"> Create Account </Link></p>

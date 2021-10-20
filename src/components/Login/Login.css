@@ -29,3 +29,18 @@
 .convert{
     font-size: 13px;
 }
+.formStyle{
+  
+    margin-right: 10%;
+ }
+ .btnStyle{
+     width: 50%;
+     font-weight: 300;
+   
+ }
+ .btn12{
+     margin: 0px;
+ }
+ .btnStyle1{
+     width: 75%;
+ }

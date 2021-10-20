@@ -7,12 +7,14 @@ import { useLocation, useHistory } from 'react-router-dom';
 
 
 const Register = () => {
-    const { 
+    const {
         signInUsingGitHub,
         handleRegisterForm,
         handleEmailChangeInput,
         handlePasswordChangeInput,
-        signInUsingGoogle
+        signInUsingGoogle,
+        handleNameChange,
+     
     } = useAuth();
     const history = useHistory();
     const location = useLocation();
@@ -34,6 +36,12 @@ const Register = () => {
                 <h1 className="title">Create Account</h1>
                 <Card.Body>
                     <form onSubmit={handleRegisterForm}>
+                        <div className="row mb-3">
+                            <label htmlFor="name" className="col-sm-2 col-form-label"></label>
+                            <div className="col-sm-10">
+                                <input onChange={handleNameChange} type="text" className="form-control" id="name" placeholder="Enter your name" />
+                            </div>
+                        </div>
 
                         <div className="row mb-3">
                             <label htmlFor="inputEmail3" className="col-sm-2 col-form-label"></label>
@@ -47,12 +55,7 @@ const Register = () => {
                                 <input onChange={handlePasswordChangeInput} type="password" className="form-control" id="inputPassword3" placeholder="Enter your password" required />
                             </div>
                         </div>
-                        <div className="row mb-3">
-                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label"></label>
-                            <div className="col-sm-10">
-                                <input onChange={handlePasswordChangeInput} type="password" className="form-control" id="inputPassword3" placeholder="Confirm password" required />
-                            </div>
-                        </div>
+                        
                         <div className="row g-3 btn12">
                             <div className="">
                                 <button type="submit" className="btn btn-info btnStyle">Register</button>

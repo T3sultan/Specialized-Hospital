@@ -36,14 +36,14 @@ const Login = () => {
                         <div className="row">
                             <label htmlFor="inputEmail3" className="col-sm-2 col-form-label"></label>
                             <div className="col-sm-10">
-                                <input onChange={handleEmailChangeInput} type="email" className="form-control" id="inputEmail3" placeholder="Enter your email" />
+                                <input onChange={handleEmailChangeInput} type="email" className="form-control" id="inputEmail3" placeholder="Enter your email" required />
                             </div>
                         </div>
                         <br />
                         <div className="row ">
                             <label htmlFor="inputPassword3" className="col-sm-2 col-form-label"> </label>
                             <div className="col-sm-10">
-                                <input onChange={handlePasswordChangeInput} type="password" className="form-control" id="inputPassword3" placeholder="Enter your password" />
+                                <input onChange={handlePasswordChangeInput} type="password" className="form-control" id="inputPassword3" placeholder="Enter your password" required />
                             </div>
                         </div>
 

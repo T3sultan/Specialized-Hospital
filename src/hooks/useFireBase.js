@@ -8,7 +8,11 @@ import {
     signOut,
     GithubAuthProvider,
     signInWithEmailAndPassword,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    updateProfile,
+    sendEmailVerification,
+    sendPasswordResetEmail,
+
 } from "firebase/auth";
 
 initializeAuthenticationFirebase()
@@ -19,7 +23,9 @@ const auth = getAuth();
 
 const useFireBase = () => {
     const [user, setUser] = useState({});
-    
+    const [name, setName] = useState('')
+    const [isLogin, setIsLogin] = useState(false);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -32,22 +38,15 @@ const useFireBase = () => {
 
 
     const signInUsingGoogle = () => {
-       
-       return  signInWithPopup(auth, googleProvider);
-            
+
+        return signInWithPopup(auth, googleProvider);
+
     }
     const signInUsingGitHub = () => {
         signInWithPopup(auth, gitHubProvider)
             .then(result => {
-                const { displayName, email, phoneNumber, photoURL } = result.user;
-                const userInfo = {
-                    name: displayName,
-                    email: email,
-                    phone: phoneNumber,
-                    photo: photoURL,
 
-                }
-                setUser(userInfo)
+                setUser(user)
             })
             .finally(() => setLoading(false));
 
@@ -72,8 +71,8 @@ const useFireBase = () => {
         signOut(auth)
             .then(() => {
                 setUser({})
-             })
-            
+            })
+
     }
 
     const handleEmailChangeInput = (e) => {
@@ -93,22 +92,19 @@ const useFireBase = () => {
     };
 
 
-    const handleLoginForm = (e) => {
-        e.preventDefault()
+    const handleLoginForm = (email, password) => {
+
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const { displayName, email, photoURL } = result.user;
-                const userInfo = {
-                    name: displayName,
-                    email: email,
-                    photo: photoURL,
-                };
-                setUser(userInfo);
+
+                setUser(user);
+                setUserName();
+                verifyEmail();
                 setError("")
 
             })
             .catch(error => {
-                const errorCode = error.code;
+
                 const errorMessage = error.message;
                 setError(errorMessage);
             })
@@ -116,25 +112,66 @@ const useFireBase = () => {
 
     }
 
-    const handleRegisterForm = (e) => {
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
             .then(result => {
-                console.log(result.user);
-                const { email, displayName, photoURL } = result.user;
-                const userInfo = {
-                    email: email,
-                    name: displayName,
-                    photo: photoURL,
 
-                };
-                setUser(userInfo)
-
-            })
-            .catch(error => {
-                console.log(error.message);
             })
     }
+
+
+
+    const handleRegisterForm = (e) => {
+        e.preventDefault()
+
+        if (password.length < 8) {
+            setError('Password must be at least 6 character')
+            return;
+          }
+        // createUserWithEmailAndPassword(auth, email, password)
+        //     .then(result => {
+
+        //         setUser(user)
+
+        //     })
+        //     .catch(error => {
+        //         console.log(error.message);
+        //     })
+    isLogin ? handleLoginForm(email, password) : registerNewUser(email, password)
+        
+    }
+    const registerNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then(result => {
+            const user = result.user;
+            console.log(user);
+            setError('')
+          })
+          .catch(error => {
+            setError(error.message)
+          })
+      }
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result)
+            })
+    }
+
+
+
+
+    const handleNameChange = e => {
+
+        setName(e.target.value)
+    }
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(result => {
+                console.log('success')
+            })
+    }
+
 
 
 
@@ -151,6 +188,9 @@ const useFireBase = () => {
         handlePasswordChangeInput,
         handleLoginForm,
         handleRegisterForm,
+        handleNameChange,
+        handleResetPassword,
+
 
 
 

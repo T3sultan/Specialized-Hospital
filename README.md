@@ -1,16 +1,16 @@
 #PROJECT NAME : SPECIALIZED HOSPITAL
 
- Content :
+ Content : <br/>
            * React Bootstrap<br/>
-           * React Router Dom         
-           * Firebase
-           * React Js
-           * Fortawesome
-           * React Router Hash Link
-           * Bootstrap
-           * CSS
-           * HTML
+           * React Router Dom <br/>        
+           * Firebase<br/>
+           * React Js<br/>
+           * Fortawesome<br/>
+           * React Router Hash Link<br/>
+           * Bootstrap<br/>
+           * CSS<br/>
+           * HTML<br/>
            
-#Specialized Hospital live site  :=>
+#Specialized Hospital live site  :=><br/>
 
 
